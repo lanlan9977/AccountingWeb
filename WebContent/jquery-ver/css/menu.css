@@ -1,0 +1,9 @@
+#login-modal{
+    opacity: 0;
+    transition: opacity .15s linear ;
+} 
+
+#login-modal.show{
+    opacity: 1;
+    display: block;
+} 

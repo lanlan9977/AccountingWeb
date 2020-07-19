@@ -1,0 +1,10 @@
+#index-content{
+    transition: opacity .15s linear ;
+}
+
+#index-content.show{
+    opacity: 1 !important;
+}
+.pointer{
+    cursor: pointer;
+}
