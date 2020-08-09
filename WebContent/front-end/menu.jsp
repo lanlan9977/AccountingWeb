@@ -31,6 +31,9 @@
 	<script src="../publiclibrary/js/bootstrap.min.js"></script> -->
 	<!-- <script type="module" src="../front-end/js/menu_test.js"></script> -->
 	<!-- <script type="module" src="../front-end/js/menu_test.js"></script> -->
+
+	
+	<!-- <script src="../front-end/js/test.js"></script> -->
 	
 </head>
 
@@ -42,19 +45,20 @@
 					<i class="fas fa-bars fa-lg" style="color:white;"></i>
 				</li>
 				<li class="nav-item">
-					<a :class="'nav-link ' + (navbar_show_index == 0 ? 'active' : '')" href="#">開始記帳</a>
+					<a :class="'nav-link ' + (navbar_show_index == 0 && navbar_show_index != '' ? 'active' : '')" href="#">開始記帳</a>
 				</li>
 				<li class="nav-item">
-					<a :class="'nav-link ' + (navbar_show_index == 1 ? 'active' : '')" href="../front-end/index.jsp">查詢紀錄</a>
+					<a :class="'nav-link ' + (navbar_show_index == 1 && navbar_show_index != '' ? 'active' : '')" href="../front-end/index.jsp">查詢紀錄</a>
 				</li>
 				<li class="nav-item">
-					<a :class="'nav-link ' + (navbar_show_index == 2 ? 'active' : '')" href="../front-end/setAchieved.jsp">設立目標</a>
+					<a :class="'nav-link ' + (navbar_show_index == 2 && navbar_show_index != '' ? 'active' : '')" href="../front-end/setAchieved.jsp">設立目標</a>
 				</li>
 			</ul>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					<button type="button" class="btn btn-dark">
-						<span class="fa fa-home" style="font-size: 28px;" id="back-home-btn"></span></button>
+					<h4 style="display: inline;vertical-align: middle;"><span class="badge badge-light" style="margin-right: 20px;">{{member_name}}</span></h4>
+					<a type="button" class="btn btn-dark" href="../front-end/index.jsp">
+						<span class="fa fa-home" style="font-size: 28px;" id="back-home-btn"></span></a>
 					<button type="button" class="btn btn-dark">
 						<span class="fa fa-user" style="font-size: 28px;" id="user-info-btn"></span></button>
 
@@ -121,6 +125,6 @@
 	var _memberName = '<c:out value="${member_name}"/>';
 	var _memberId = '<c:out value="${member_id}"/>';
 </script>
-<script src="../front-end/js/menu.js">
+<script type="module" src="../front-end/js/menu.js">
 </script>
 </html>

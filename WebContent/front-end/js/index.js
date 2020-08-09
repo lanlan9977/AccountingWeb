@@ -28,6 +28,7 @@ var initData = {
 var initVue = new Vue({
     'el': '#index-container',
     'data': initData,
+    'create' : create(),
     'init': init(this),
     'methods': {
         vStartQuerySpendInfo() {
@@ -47,9 +48,13 @@ var initVue = new Vue({
     }
 });
 
+
+function create(){
+    toggleNavbar(1);
+}
+
 function init(vueData) {
     getConsumeItemInfo();
-    toggleNavbar(1);
     setTimeout(() => {
         vueData.initData.is_show_content = true;
         vueData.initData.class_text = 'col-md-12 show';
